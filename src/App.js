@@ -27,7 +27,21 @@ const HeroSection = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  z-index: -2;
+`;
+
+const HeroSection1 = styled.div`
+  margin: 0px;
+  text-align: center;
+
+  // background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  //   url("https://imgur.com/YcAASWE.jpg");
+
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -2;
 `;
 
 const MiddleContent = styled.div`
@@ -102,25 +116,24 @@ function App() {
       {/*
       START NAV BAR
       */}
-      <div Navbar>
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="mr-auto">
-              <Nav.Link href="#education">Education</Nav.Link>
-              <Nav.Link href="#experience">Experience</Nav.Link>
-              <Nav.Link href="#ceramicsClub">Ceramics Club</Nav.Link>
-              <Nav.Link href="#projects">Projects</Nav.Link>
-            </Nav>
-            <Nav>
-              <Nav.Link href="#contactMe">Contact Me</Nav.Link>
-              <Nav.Link eventKey={2} href="#memes">
-                Meme of the Day
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-      </div>
+      <Navbar fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link href="#education">Education</Nav.Link>
+            <Nav.Link href="#experience">Experience</Nav.Link>
+            <Nav.Link href="#ceramicsClub">Ceramics Club</Nav.Link>
+            <Nav.Link href="#projects">Projects</Nav.Link>
+          </Nav>
+          <Nav>
+            <Nav.Link href="#contactMe">Contact Me</Nav.Link>
+            <Nav.Link eventKey={2} href="#memes">
+              Meme of the Day
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+
       {/*
       END NAV BAR
        */}
@@ -140,23 +153,31 @@ function App() {
               RAYNA NEY
             </div>
             <div
-              style={{ color: "white", paddingTop: "0em", fontSize: "17px" }}
+              style={{
+                color: "white",
+                paddingTop: "0em",
+                paddingBottom: "7em",
+                fontSize: "17px"
+              }}
             >
               "Looking for a job"
             </div>
-            <MiddleContent>
+            {/* <MiddleContent>
               <ImageCard>
                 <img
                   width="100%"
                   alt="first img"
-                  src="https://cdn.dribbble.com/users/1355613/screenshots/7108346/media/4d5498d6903b88fe4ff581d9c35a72e1.jpg"
+                  src="https://imgur.com/VNx9e1W.png"
+                  style={{
+                    color: "white"
+                  }}
                 />
               </ImageCard>
               <ImageCard>
                 <img
                   width="100%"
                   alt="second img"
-                  src="https://cdn.dribbble.com/users/1355613/screenshots/6292314/bus_stop_4x.jpg"
+                  src="https://imgur.com/fDMcpLZ.jpg"
                 />
               </ImageCard>
               <ImageCard>
@@ -166,9 +187,12 @@ function App() {
                   src="https://cdn.dribbble.com/users/1355613/screenshots/6568571/____41_4x.jpg"
                 />
               </ImageCard>
-            </MiddleContent>
+            </MiddleContent> */}
           </ImageCard1>
         </HeroSection>
+        <HeroSection1>
+          <p>ABOUT ME</p>
+        </HeroSection1>
       </Fragment>
     </div>
   );
